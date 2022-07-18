@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comforter&family=Dancing+Script&family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,100;1,300&family=Montserrat:wght@100;200;300;400;600;700&family=Philosopher:wght@400;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+    <title>Blackjack</title>
+</head>
+<body>
+    <section class="intro">
+        <div class="intro">
+    <h1>Welcome to the blackjack arena!</h1>
+    <h2>We have been expecting you, <span id="name"> </span></h2>
+    <h2>Game Time, <span style="color: pink;">Champ</span></h2>
+    <h2>Let's <span style="color: rgb(164, 48, 67);">bet, hold and beat</span> the bot's ass already!</h2>
+    <h2><span style="color:pink;">Quick question! </span>Can I assume that you are</h2>
+    <h2>familiar with the <span style="color: rgb(164, 48, 67);">blackjack rules</span> or shall</h2>
+    <h2>I do the <span style="color: pink;">honor</span> of walking you through those?</h2> <br>
+   <br>
+    <div class="buttons">
+        <div>
+            <a href="#rules" >Rules</a>
+        </div>
+        <div>
+            <a href="#message" style="background-color: orange;">Skip</a>
+        </div>
+    </div>
+</div> <br><br><br><br><br><br><br><br><br>
+</section>
+
+<section class="rules">
+    <div class="rules" id="rules">
+        <h1>Blackjack Rules</h1>
+        <h3>The BlackJack card game as you know it, isn't rocket science to comprehend. It follows a very simple
+        <h3>set of rules which are laid down for y'all to go through:</h2> <br><br>
+        <ol>
+            <li>Each number card holds a respective value which equals the number, like, value of card 2=2, value of card 3=3 etc</li>
+            <li>All the face cards hold a standard value of 10</li>
+            <li>The user begins laying down cards which are randomly generated(Ace to King)</li>
+            <li>The values of the cards keep adding up to the user score.</li>
+            <li>The score of the user in one attempt should be less than or equal to 21. If it crosses 21, then the user is busted </li>
+            <li>The user can begin betting the cards as long as he is safe about the 21 score limit. When they are done, they can hit the hold button </li>
+            <li>Next it's the bot's turn. If the score of Bot exceed that of user, user loses and the vice versa</li>
+            <li>If both bot and user are busted, then it's a draw. If either one of em remain busted, then the busted player loses the round</li>
+            <li>The scores of user are recorded below. Press deal to start the next hand</li>
+        </ol> <br> <br>
+    </div>
+</section>
+
+<br><br><br>
+
+
+
+
+    <!-- 3rows: 1st row- our crads vs dealer cards, 2nd row- hit,deal buttons, 3rd row-score table -->
+    <section>
+    <h2 class="arena">GAME ZONE</h2> <br>
+    <h2 class="arena" id="message">Hit it!</h1> <br> <br>
+    <div class="container">
+        <div class="row1">
+            <div id="user">
+            <h3>YOU:<span id="userscore">0</span></h2>
+            </div>
+            <div id="bot">
+                <h3>BOT:<span id="botscore">0</span></h2>
+                </div>
+            </div>
+            
+            <div class="row2">
+                <div>
+                    <button id="hit" onclick="hit()" style="background-color: steelblue;">Hit</button>
+                </div>
+                <div>
+                    <button id="hold" onclick="hold()" style="background-color: orange;">Hold</button>
+                </div>
+                
+        <div>
+            <button id="deal" onclick="deal()" style="background-color: maroon;">Deal</button>
+        </div>
+    </div>
+    <br><br>
+    <div class="row3">
+        <table style="color: white;">
+            <tr>
+                <th >Wins</th>
+                <th >Losses</th>
+                <th >Draws</th>
+            </tr>
+            <tr>
+                <td><span id="wins">0</span></td>
+                <td><span id="losses">0</span></td>
+                <td><span id="draws">0</span></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</section>
+
+<script src="./blackjack.js"></script>
+
+</body>
+</html>
